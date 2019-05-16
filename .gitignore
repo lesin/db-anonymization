@@ -1,0 +1,16 @@
+/.bundle
+
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/db/schema.rb
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/tmp/pids/.gitkeep
+!/tmp/_.txt
+
+# Ignore all DS_Store mac os
+.DS_Store
+
+.env
