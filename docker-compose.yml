@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  db_anonymization:
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: .
+    image: db_anonymization
+    env_file: ./secrets.env
+    environment:
+      ENV: "production"
+    command: bundle exec ruby app/main.rb
