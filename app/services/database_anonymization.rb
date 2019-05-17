@@ -22,7 +22,7 @@ class DatabaseAnonymization
           name: Faker::Company.name,
           email: dealership.id.to_s + Faker::Internet.email,
           phone: DEFAULT_PHONE,
-          encrypted_password: ENV['DEFAULT_PASSWORD'],
+          encrypted_password: ENV['DEFAULT_PASSWORD_ENCRYPTED'],
           country_code: 'PL',
           timezone: 'Warsaw',
           short_name: nil,
@@ -43,7 +43,7 @@ class DatabaseAnonymization
       User.find_each do |user|
         user.update_columns(
           email: user.id.to_s + Faker::Internet.email,
-          encrypted_password: ENV['DEFAULT_PASSWORD'],
+          encrypted_password: ENV['DEFAULT_PASSWORD_ENCRYPTED'],
           name: Faker::Name.name,
           phone: DEFAULT_EMPTY_PHONE,
           username: user.id.to_s + Faker::Internet.email,
