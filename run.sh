@@ -1,2 +1,2 @@
-#!/bin/ash
+#!/bin/bash
 docker-compose run --rm cleardb
