@@ -21,6 +21,7 @@ class DatabaseAnonymization
       dealerships_data_anonymization
       users_data_anonymization
       customers_data_anonymization
+      vehicles_data_anonymization
     end
   end
 
@@ -73,6 +74,16 @@ class DatabaseAnonymization
         email: customer.id.to_s + Faker::Internet.email,
         name: Faker::Name.name,
         phone: DEFAULT_EMPTY_PHONE
+      )
+      printf '.'
+    end
+  end
+
+  def vehicles_data_anonymization
+    puts "\nanonymize vehicles"
+    Vehicle.find_each do |vehicle|
+      vehicle.update_columns(
+        vin: vehicle.id.to_s + Faker::Number.number(5)
       )
       printf '.'
     end

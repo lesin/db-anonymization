@@ -34,6 +34,7 @@ class Interface
     puts "#{Dealership.count} dealerships"
     puts "#{User.count} users"
     puts "#{Customer.count} customers"
+    puts "#{Vehicle.count} vehicles"
   end
 
   def env_variables_not_set?
