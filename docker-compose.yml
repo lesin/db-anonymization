@@ -1,6 +1,8 @@
 version: '3.4'
 services:
   cleardb:
+
+    network_mode: "bridge"
     build:
       dockerfile: ./docker/Dockerfile
       context: .
