@@ -44,7 +44,14 @@ class DatabaseAnonymization
         pbs_dealer_code: nil,
         openmate_dealer_code: nil,
         dealer_built_dealer_codes: nil,
-        infomedia_dealer_code: nil
+        infomedia_dealer_code: nil,
+        twilio_subaccount_id: nil,
+        communication_enabled: false,
+        welcome_message_enabled: false,
+        twilio_api_key: nil,
+        twilio_api_secret: nil,
+        twilio_mobile_push_android_sid: nil,
+        twilio_mobile_push_ios_sid: nil
       )
       printf '.'
     end
