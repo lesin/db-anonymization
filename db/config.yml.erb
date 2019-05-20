@@ -3,8 +3,8 @@ default: &default
   encoding: unicode
   pool: 40
   host: <%= ENV['DATABASE_HOST'] %>
-  port: 5432
-  username: <%= ENV['DATABASE_USERNAME'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %> 
   password: <%= ENV['DATABASE_PASSWORD'] %>
 
 development:
